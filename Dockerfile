@@ -10,5 +10,5 @@ RUN API_URI=${API_URI} npm run build
 FROM nginx:stable
 WORKDIR /app
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /app/dist/ /app/
+COPY --from=builder /app/dist /app
 RUN chown -R nginx:nginx /app
