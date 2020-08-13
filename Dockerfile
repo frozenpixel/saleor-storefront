@@ -11,3 +11,5 @@ FROM node:10
 WORKDIR /app
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/dist/ /app/
+RUN chown -R nginx:nginx /app
+RUN chmod -R 755 /app
