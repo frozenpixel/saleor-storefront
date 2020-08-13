@@ -9,7 +9,7 @@ RUN API_URI=${API_URI} npm run build
 
 FROM nginx:stable
 WORKDIR /app
-COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY ./nginx/cell.a6design.net /etc/nginx/vhost.d/cell.a6design.net
 COPY --from=builder /app/dist/ /app/
 RUN chown -R nginx:nginx /app
 RUN chmod -R 755 /app
