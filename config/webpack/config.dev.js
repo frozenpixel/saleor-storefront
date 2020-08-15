@@ -25,6 +25,6 @@ module.exports = ({ sourceDir, distDir }) => ({
       filename: "[name].css",
       chunkFilename: "[id].css"
     }),
-    new HotModulePlugin()
+    new HotModulePlugin(),
   ]
 });
