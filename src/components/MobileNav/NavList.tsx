@@ -64,11 +64,34 @@ class NavList extends React.PureComponent<NavListProps, NavListState> {
     return (
       <ul>
         {parent ? (
-          <li className="side-nav__menu-item side-nav__menu-item-back">
-            <span onClick={this.handleGoBack}>
-              <ReactSVG path={backImg} /> {parent.name}
-            </span>
-          </li>
+          <>
+            <li className="side-nav__menu-item side-nav__menu-item--parent">
+              <Link
+                to={baseUrl}
+                className="side-nav__menu-item-logo"
+                onClick={hideOverlay}
+              >
+                <ReactSVG path={logoImg} />
+              </Link>
+              <span className="side-nav__menu-item-close" onClick={hideOverlay}>
+                <span />
+              </span>
+            </li>
+            <li className="side-nav__menu-item">
+              <Link
+                to={baseUrl}
+                className="side-nav__menu-item-link"
+                onClick={hideOverlay}
+              >
+                Home
+              </Link>
+            </li>
+            <li className="side-nav__menu-item side-nav__menu-item-back">
+              <span onClick={this.handleGoBack}>
+                <ReactSVG path={backImg} /> {parent.name}
+              </span>
+            </li>
+          </>
         ) : (
           <>
             <li className="side-nav__menu-item side-nav__menu-item--parent">
