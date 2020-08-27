@@ -43,12 +43,12 @@ const Page: React.FC<{
         <div className="home-page__hero-text">
           <div>
             <span className="home-page__hero__title">
-              <h1>Final reduction</h1>
+              <h1>Summer remedies</h1>
             </span>
           </div>
           <div>
             <span className="home-page__hero__title">
-              <h1>Up to 70% off sale</h1>
+              <h1>The natural choice since 1988</h1>
             </span>
           </div>
         </div>
@@ -63,7 +63,7 @@ const Page: React.FC<{
                   categories.edges[0].node.name
                 )}
               >
-                <Button>Shop sale</Button>
+                <Button>Shop</Button>
               </Link>
             )
           )}
