@@ -1,14 +1,15 @@
 @import "../../../globalStyles/scss/variables.scss";
 
 .footer {
+  background-color: $black;
+
   &__favicons {
-    border-top: 1px solid $gray-light;
+    border-top: 1px solid $black;
     display: flex;
-    justify-content: center;
+    justify-content: right;
   }
 
   &__menu {
-    background-color: $gray-light;
     padding: $spacer * 3 0 $spacer * 2;
 
     .container {
@@ -33,11 +34,11 @@
           font-weight: $bold-font-weight;
           margin-bottom: $spacer;
           font-size: $small-font-size;
-          color: $gray;
+          color: $gray-light;
 
           a {
             text-decoration: none;
-            color: $gray;
+            color: $gray-light;
           }
         }
       }
@@ -45,7 +46,6 @@
   }
 
   &-nav {
-    background-color: $gray-light;
     padding: $spacer * 3 0 $spacer * 2;
 
     .container {
@@ -59,20 +59,26 @@
 
     &__section {
       &-header {
-        font-weight: $bold-font-weight;
         margin-bottom: $spacer;
         text-transform: uppercase;
+        color: $gray-light;
       }
 
       &-content {
         p {
           margin-bottom: $spacer;
           font-size: $small-font-size;
-          color: $gray;
+          color: $gray-light;
+          text-decoration: transparent;
+          transition: 0.5s;
 
           a {
-            text-decoration: none;
             color: $gray;
+          }
+
+          &:hover {
+            text-decoration: underline solid 3px $turquoise;
+            text-underline-position: under;
           }
         }
       }

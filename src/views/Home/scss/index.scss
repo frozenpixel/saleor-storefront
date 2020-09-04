@@ -1,6 +1,8 @@
 @import "../../../globalStyles/scss/variables.scss";
 
 .home-page {
+  background-color: $gray-light;
+  
   &__hero {
     background-color: $blue-overlay;
     background-blend-mode: multiply;

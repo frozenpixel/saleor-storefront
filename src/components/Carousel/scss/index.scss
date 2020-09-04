@@ -1,6 +1,8 @@
 @import "../../../globalStyles/scss/variables.scss";
 
 .carousel {
+  border: 1px solid $gray-light2;
+
   &__control {
     padding: $carousel-control-padding;
     background-color: $white;
@@ -38,5 +40,7 @@
 
   .slider-slide {
     text-align: center;
+    background-color: $white;
+    padding: 1rem;
   }
 }
