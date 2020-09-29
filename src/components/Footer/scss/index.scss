@@ -1,12 +1,21 @@
 @import "../../../globalStyles/scss/variables.scss";
 
 .footer {
-  background-color: $black;
+  background-color: $gray-light;
 
   &__favicons {
-    border-top: 1px solid $black;
+    background-color: $gray-light;
+    border-top: 1px solid $gray-light;
     display: flex;
     justify-content: right;
+  }
+
+  &__copyright {
+    background-color: $black;
+    color: $gray-dark;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1rem;
   }
 
   &__menu {
@@ -47,6 +56,7 @@
 
   &-nav {
     padding: $spacer * 3 0 $spacer * 2;
+    background-color: $black;
 
     .container {
       display: flex;
